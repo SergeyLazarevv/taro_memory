@@ -20,6 +20,8 @@ h2 {
     color: #e2d6d6;
     display: flex; /* Включаем Flexbox */
     align-items: center; 
+    font-family:  'Cinzel Decorative', serif;
+    
 }
 
 .board {
@@ -170,6 +172,10 @@ h2 {
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     position: relative;
+    font-family: 'Eagle Lake', cursive;
+}
+p {
+    font-family: 'Eagle Lake', cursive;
 }
 
 /* Кнопка закрытия */
@@ -197,9 +203,4 @@ h2 {
     color: #fff; */
     border: none;
     border-radius: 5px;
-    opacity: .5;
-}
-
-#openModalBtn:hover {
-    opacity: 1;
 }
