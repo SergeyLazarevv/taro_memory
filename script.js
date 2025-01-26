@@ -257,6 +257,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //console.log(cards)
     cards = getRandomUniqueCards(cards, 8)
     cards = cards.flatMap(item => [item, item]);
+    preloadImagesWithLink(cards)
     //console.log(cards)
 
     let flippedCards = [];
@@ -266,6 +267,17 @@ document.addEventListener('DOMContentLoaded', () => {
     // const matchedPairsContainer = document.createElement('div');
     // matchedPairsContainer.id = 'matched-pairs';
     // document.body.appendChild(matchedPairsContainer);
+    function preloadImagesWithLink(cards) {
+        cards.forEach((card) => {
+            const link = document.createElement('link');
+            link.rel = 'preload';
+            link.as = 'image';
+            link.href = card.image;
+            document.head.appendChild(link);
+            console.log('added')
+        });
+    }
+
     function getRandomUniqueCards(array, count) {
         const uniqueNumbers = new Set();
     

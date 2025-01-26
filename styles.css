@@ -33,7 +33,7 @@ h2 {
     height: 110px;
     /* background-color: #010e01; */
     background-image: url('./images/card_background.jpg');
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     color: white;
     display: flex;
