@@ -45,9 +45,9 @@ h2 {
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.card:hover {
+/* .card:hover {
     transform: translateY(-5px);
-}
+} */
 
 .card.flipped {
     /* background-image: none;
@@ -68,11 +68,11 @@ h2 {
     grid-template-columns: repeat(8, 150px);
 }
 
-.card-container {
+/* .card-container {
     display: flex;
     align-items: flex-start;
     gap: 20px; 
-    /* border: 1px solid #ccc; */
+  
     padding: 20px;
     max-width: 800px;
     margin: 0 auto;
@@ -96,4 +96,39 @@ h2 {
     font-size: 13px;
     line-height: 1.5;
     color: #e2d6d6;
+} */
+
+.card-container {
+    display: flex;
+    flex-direction: column; /* Элементы располагаются вертикально */
+    align-items: center; /* Центрируем по горизонтали */
+    gap: 20px; /* Расстояние между элементами */
+    border: 1px solid #ccc;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto; /* Центрируем контейнер на странице */
+}
+.card-container {
+    display: none;
+}
+
+/* Стили для картинки */
+.card-image {
+    flex: 0 0 auto; /* Отключаем растягивание */
+    width: 200px; /* Фиксированная ширина */
+}
+
+.card-image img {
+    width: 100%; /* Картинка занимает всю ширину блока */
+    height: auto; /* Сохраняем пропорции */
+    border-radius: 10px; /* Закруглённые углы (опционально) */
+}
+
+/* Стили для текста */
+.card-text {
+    flex: 1; /* Текст занимает оставшееся пространство */
+    font-size: 13px;
+    line-height: 1.5;
+    color: #e2d6d6;
+    text-align: center; /* Центрируем текст */
 }
