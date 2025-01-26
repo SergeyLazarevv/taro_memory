@@ -59,8 +59,9 @@ h2 {
 
 .card.matched {
     background-color: #9C27B0;
-    opacity: 0;
+    /* opacity: 0; */
     cursor: default;
+    animation: disappear 0.8s forwards;
 }
 
 #matched-pairs {
@@ -68,6 +69,17 @@ h2 {
     gap: 10px;
     margin-top: 50px;
     grid-template-columns: repeat(8, 150px);
+}
+
+@keyframes disappear {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
 }
 
 /* .card-container {
