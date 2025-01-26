@@ -7,9 +7,19 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h2>Taro Memory</h2>
+    <h2>Taro Memory <img id="openModalBtn" src="./images/icon.png" alt="Иконка"></h2>
+    <!-- <button id="openModalBtn">Открыть модальное окно</button> -->
+
     <div id="game-board" class="board"></div>
     <div class="card-container"></div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="closeModalBtn" class="close">&times;</span>
+            <h2>Правила</h2>
+            <p>Найди все пары одинаковых карт Таро, а в конце получи предсказание на неделю. Не торопись, наслаждайся процессом .     
+                Когда останется последняя пара - это и станет твоим предсказанием на ближайшею неделю.</p>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
