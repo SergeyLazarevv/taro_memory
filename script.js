@@ -255,7 +255,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     ];
     //console.log(cards)
-    cards = getRandomUniqueCards(cards, 2)
+    cards = getRandomUniqueCards(cards, 8)
     cards = cards.flatMap(item => [item, item]);
     //console.log(cards)
 
