@@ -172,10 +172,9 @@ h2 {
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     position: relative;
-    font-family: 'Eagle Lake', cursive;
 }
-p {
-    font-family: 'Eagle Lake', cursive;
+.modal-content p {
+    color: #e2d6d6;
 }
 
 /* Кнопка закрытия */
