@@ -205,3 +205,31 @@ h2 {
     border: none;
     border-radius: 5px;
 }
+
+/* Планшеты (ширина от 601px до 768px) */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    .card {
+        width: 90px;
+        height: 150px;
+    }
+    .board {
+        grid-template-columns: repeat(4, 90px);
+    }
+    .card-text p {
+        font-size: 14px;
+    }
+}
+
+/* ПК (ширина от 769px и выше) */
+@media only screen and (min-width: 769px) {
+    .card {
+        width: 120px;
+        height: 190px;
+    }
+    .board {
+        grid-template-columns: repeat(4, 120px);
+    }
+    .card-text p {
+        font-size: 17px;
+    }
+}
