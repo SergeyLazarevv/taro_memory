@@ -278,7 +278,7 @@ document.addEventListener('DOMContentLoaded', () => {
     /////////////////////////////////////////////////////////////
 
 
-    cards = getRandomUniqueCards(cards, 2)
+    cards = getRandomUniqueCards(cards, 8)
     cards = cards.flatMap(item => [item, item]);
     preloadImagesWithLink(cards)
 
