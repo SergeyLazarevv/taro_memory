@@ -277,19 +277,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     /////////////////////////////////////////////////////////////
 
-    //console.log(cards)
-    cards = getRandomUniqueCards(cards, 8)
+
+    cards = getRandomUniqueCards(cards, 2)
     cards = cards.flatMap(item => [item, item]);
     preloadImagesWithLink(cards)
-    //console.log(cards)
 
     let flippedCards = [];
     let matchedCards = [];
 
-    // Создаём элемент для отображения угаданных пар
-    // const matchedPairsContainer = document.createElement('div');
-    // matchedPairsContainer.id = 'matched-pairs';
-    // document.body.appendChild(matchedPairsContainer);
     function preloadImagesWithLink(cards) {
         cards.forEach((card) => {
             const link = document.createElement('link');
@@ -341,6 +336,14 @@ document.addEventListener('DOMContentLoaded', () => {
         // Добавляем картинку и текст в контейнер
         cardContainer.appendChild(cardImage);
         cardContainer.appendChild(cardText);
+        canvasSizeUpdate()
+
+    }
+
+    function canvasSizeUpdate() {
+        canvas.width = window.innerWidth;
+        canvas.height = document.body.offsetHeight;
+        init();
     }
 
     // Перемешиваем карты
@@ -358,7 +361,6 @@ document.addEventListener('DOMContentLoaded', () => {
         shuffle(cards).forEach((card, index) => {
             const cardElement = document.createElement('div');
             cardElement.classList.add('card');
-            //cardElement.dataset.value = card.value;
             cardElement.dataset.image = card.image;
             cardElement.dataset.index = index;
             cardElement.dataset.name = card.name;
@@ -372,8 +374,6 @@ document.addEventListener('DOMContentLoaded', () => {
     function flipCard() {
             if (flippedCards.length < 2 && !this.classList.contains('flipped') && !this.classList.contains('matched')) {
                 this.classList.add('flipped');
-                //this.textContent = this.dataset.value;
-                console.log('THIS ', this)
                 this.style.backgroundImage = 'url(' + this.dataset.image + ')';
                 flippedCards.push(this);
 
@@ -395,7 +395,7 @@ document.addEventListener('DOMContentLoaded', () => {
             card2.classList.add('matched');
             matchedCards.push(card1, card2);
             cards = cards.filter(item => item.name !== card1.dataset.name);
-            console.log(222,cards)
+            //console.log(222,cards)
 
             // Обновляем список угаданных пар
             updateMatchedPairs(card1.dataset.name);
@@ -404,8 +404,6 @@ document.addEventListener('DOMContentLoaded', () => {
             if (cards.length === 2) {
                 console.log(111,cards)
                 finishGame(cards[0]);
-                // setTimeout(() => alert('Поздравляем! Вы выиграли!'), 500);
-
             }
         } else {
             setTimeout(() => {
@@ -430,8 +428,6 @@ document.addEventListener('DOMContentLoaded', () => {
         cardElement.classList.add('card');
         cardElement.classList.add('flipped');
         cardElement.dataset.name = name;
-        //cardElement.textContent = value;
-        //matchedPairsContainer.appendChild(cardElement);
     }
 
     // Запускаем игру
