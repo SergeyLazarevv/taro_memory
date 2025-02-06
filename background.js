@@ -83,14 +83,6 @@ function init() {
         const speed = 0;
         stars.push(new Star(x, y, radius, color, speed));
     }
-
-    // Создаем планеты
-    // for (let i = 0; i < 4; i++) {
-    //     const radius = Math.random() * 10 + 10;
-    //     const color = planetColors[i];
-    //     const speed = Math.random() * 0.02 + 0.01;
-    //     planets.push(new Planet(canvas.width / 2, canvas.height / 2, radius, color, speed));
-    // }
 }
 
 // Анимация
@@ -109,5 +101,5 @@ window.addEventListener('resize', () => {
 });
 
 // Запуск
-init();
-animate();
+// init();
+// animate();
